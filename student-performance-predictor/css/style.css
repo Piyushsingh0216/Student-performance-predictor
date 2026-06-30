@@ -1,0 +1,139 @@
+:root {
+  --bg: #080b12;
+  --panel: rgba(15, 23, 42, 0.74);
+  --panel-strong: rgba(15, 23, 42, 0.92);
+  --text: #e5eefb;
+  --muted: #9fb2c8;
+  --cyan: #22d3ee;
+  --green: #22c55e;
+  --orange: #f97316;
+  --red: #ef4444;
+}
+
+.stApp {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(34, 211, 238, .16), transparent 32%),
+    radial-gradient(circle at 82% 16%, rgba(16, 185, 129, .14), transparent 30%),
+    linear-gradient(135deg, #070a12 0%, #111827 46%, #07111f 100%);
+  color: var(--text);
+  font-family: Inter, Segoe UI, system-ui, sans-serif;
+}
+
+[data-testid="stSidebar"] {
+  background: rgba(2, 6, 23, .82);
+  border-right: 1px solid rgba(148, 163, 184, .18);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #f8fafc;
+  padding: .8rem 0 1rem;
+}
+
+.hero {
+  min-height: 220px;
+  padding: 34px 38px;
+  border: 1px solid rgba(148, 163, 184, .18);
+  border-radius: 8px;
+  background:
+    linear-gradient(110deg, rgba(8, 13, 28, .96), rgba(8, 47, 73, .72)),
+    url("../assets/background.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .24);
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  max-width: 940px;
+  font-size: 3rem;
+  line-height: 1.04;
+  margin: 0 0 12px;
+  letter-spacing: 0;
+}
+
+.hero p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+[data-testid="stMetric"] {
+  background: var(--panel);
+  border: 1px solid rgba(148, 163, 184, .18);
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .18);
+}
+
+.glass-card,
+.prediction-card {
+  background: var(--panel);
+  border: 1px solid rgba(148, 163, 184, .18);
+  border-radius: 8px;
+  padding: 18px;
+  backdrop-filter: blur(18px);
+}
+
+.glass-card strong {
+  display: block;
+  font-size: 2rem;
+  margin-top: 12px;
+}
+
+.glass-card span {
+  color: var(--muted);
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 800;
+  font-size: .86rem;
+}
+
+.stButton > button,
+.stDownloadButton > button,
+[data-testid="stFormSubmitButton"] button {
+  border-radius: 8px;
+  border: 1px solid rgba(34, 211, 238, .45);
+  background: linear-gradient(135deg, #0e7490, #047857);
+  color: #f8fafc;
+  font-weight: 800;
+  min-height: 42px;
+  box-shadow: 0 14px 32px rgba(8, 145, 178, .24);
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover,
+[data-testid="stFormSubmitButton"] button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 211, 252, .8);
+}
+
+div[data-testid="stDataFrame"],
+div[data-testid="stPlotlyChart"] {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+input,
+textarea,
+select {
+  border-radius: 8px !important;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 24px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
